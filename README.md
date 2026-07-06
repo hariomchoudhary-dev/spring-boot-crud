@@ -140,7 +140,7 @@ http://localhost:8080
 
 ## 🔍 Get Student By ID
 
-![Get Student By ID](screenshots/get-by-id.png)
+![Get Student By ID](screenshots/get-id.png)
 
 ---
 
