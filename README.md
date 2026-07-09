@@ -40,10 +40,15 @@ A RESTful CRUD application built using **Spring Boot**, **Spring Data JPA**, and
 src
 ├── controller
 │     └── StudentController
+├──dto
+     └── CreateStudentRequestDto
+     └── CreateStudentResponseDto
+     └── UpdateStudentRequestDto
+     └── UpdateStudentResponseDto
 ├── service
 │     └── StudentService
 ├── repository
-│     └── StudentRepository
+│     └── StudentRepository(JpaRepository)
 ├── entity
 │     └── Student
 └── resources
@@ -169,7 +174,7 @@ http://localhost:8080
              │
              ▼
       StudentController
-             │
+Request DTO  │  Response DTO
              ▼
        StudentService
              │
@@ -194,13 +199,15 @@ http://localhost:8080
 - Environment Variables
 - ResponseEntity
 - Maven
+- Bean Validation
+- DTOs
 - Git & GitHub
 
 ---
 
 ## 🔮 Future Improvements
 
-- Bean Validation
+
 - Global Exception Handling
 - Swagger / OpenAPI
 - JWT Authentication
