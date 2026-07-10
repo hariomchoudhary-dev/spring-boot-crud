@@ -65,7 +65,7 @@ return ResponseEntity
       studentService.deleteStudent(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
-    @PatchMapping("/delete-soft/{id}")
+    @PatchMapping("/{id}")
     public ResponseEntity<String> deleteStudentSoftly(@PathVariable Long id){
     studentService.deleteStudentSoftly(id);
     return ResponseEntity.status(HttpStatus.NO_CONTENT).build();

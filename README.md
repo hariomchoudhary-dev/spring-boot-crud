@@ -41,16 +41,21 @@ src
 ├── controller
 │     └── StudentController
 ├──dto
-     └── CreateStudentRequestDto
-     └── CreateStudentResponseDto
-     └── UpdateStudentRequestDto
-     └── UpdateStudentResponseDto
+│     └── CreateStudentRequestDto
+│     └── CreateStudentResponseDto
+│     └── UpdateStudentRequestDto
+│     └── UpdateStudentResponseDto
 ├── service
 │     └── StudentService
 ├── repository
 │     └── StudentRepository(JpaRepository)
 ├── entity
 │     └── Student
+├── exception
+│      └── GlobalExceptionHandler
+│      └── DuplicateResourceException
+│      └── ResourceNotFoundException
+│
 └── resources
       └── application.properties
 ```
@@ -73,14 +78,14 @@ src
 
 ## 📡 API Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/student/create` | Create a Student |
-| GET | `/student/get-all` | Get All Students |
-| GET | `/student/get/{id}` | Get Student by ID |
-| PUT | `/student/update/{id}` | Update Student |
-| DELETE | `/student/delete/{id}` | Hard Delete Student |
-| PATCH | `/student/delete-soft/{id}` | Soft Delete Student |
+| Method | Endpoint                    | Description |
+|--------|-----------------------------|-------------|
+| POST | `/student`                  | Create a Student |
+| GET | `/student`                  | Get All Students |
+| GET | `/student/id}`              | Get Student by ID |
+| PUT | `/student/{id}`             | Update Student |
+| DELETE | `/student/{id}`             | Hard Delete Student |
+| PATCH | `/student/{id}` | Soft Delete Student |
 
 ---
 
@@ -201,14 +206,13 @@ Request DTO  │  Response DTO
 - Maven
 - Bean Validation
 - DTOs
+- Global Exception Handling
 - Git & GitHub
 
 ---
 
 ## 🔮 Future Improvements
 
-
-- Global Exception Handling
 - Swagger / OpenAPI
 - JWT Authentication
 - Pagination & Sorting
